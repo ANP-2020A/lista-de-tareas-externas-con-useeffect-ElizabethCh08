@@ -21,9 +21,9 @@ const TodoList = () => {
     useEffect( () => {
         console.log( 'efecto', allTask.length );
         if( allTask.length > 0 ) {
-            document.title = `${ allTask.length } tareas pendientes`;
+            document.title = `${ allTask.length } Tareas pendientes: `;
         } else {
-            document.title = `Tareas`;
+            document.title = `No tienes tareas pendientes `;
         }
     }, [ allTask ] );
 
@@ -35,8 +35,6 @@ const TodoList = () => {
 
     useEffect( () => {
         console.log( 'El componente se monto' );
-
-
 
         return () => {
             console.log( 'El componnte se desmonto' );
@@ -109,6 +107,8 @@ const TodoList = () => {
                 <thead>
                 <tr>
                     <th>Nombre</th>
+                    <th>Eliminar</th>
+                    <th>Completar</th>
 
                 </tr>
                 </thead>

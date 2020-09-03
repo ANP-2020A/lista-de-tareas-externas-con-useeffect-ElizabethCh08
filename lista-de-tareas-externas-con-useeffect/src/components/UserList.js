@@ -45,6 +45,7 @@ const UserList = () => {
 
                 <button onClick={ handleAddUser }>Agregar Usuario</button>
             </div>
+            <h1>Lista de usuarios({users.length}) en total</h1>
             <ul>
                 {
                     users.map( ( user, index ) => (
